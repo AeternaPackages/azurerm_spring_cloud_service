@@ -5,7 +5,7 @@ locals {
     for k1, v1 in var.spring_cloud_services : {
       for k2, v2 in coalesce(v1.spring_cloud_accelerators, {}) :
       "${k1}/${k2}" => merge(v2, {
-        spring_cloud_service_id = module.spring_cloud_services.spring_cloud_services["${k1}"].id
+        spring_cloud_service_id = module.spring_cloud_services.spring_cloud_services_id["${k1}"]
       })
     }
   ]...)
@@ -14,7 +14,7 @@ locals {
     for k1, v1 in var.spring_cloud_services : {
       for k2, v2 in coalesce(v1.spring_cloud_api_portals, {}) :
       "${k1}/${k2}" => merge(v2, {
-        spring_cloud_service_id = module.spring_cloud_services.spring_cloud_services["${k1}"].id
+        spring_cloud_service_id = module.spring_cloud_services.spring_cloud_services_id["${k1}"]
       })
     }
   ]...)
@@ -23,7 +23,7 @@ locals {
     for k1, v1 in var.spring_cloud_services : {
       for k2, v2 in coalesce(v1.spring_cloud_app_dynamics_application_performance_monitorings, {}) :
       "${k1}/${k2}" => merge(v2, {
-        spring_cloud_service_id = module.spring_cloud_services.spring_cloud_services["${k1}"].id
+        spring_cloud_service_id = module.spring_cloud_services.spring_cloud_services_id["${k1}"]
       })
     }
   ]...)
@@ -32,7 +32,7 @@ locals {
     for k1, v1 in var.spring_cloud_services : {
       for k2, v2 in coalesce(v1.spring_cloud_application_insights_application_performance_monitorings, {}) :
       "${k1}/${k2}" => merge(v2, {
-        spring_cloud_service_id = module.spring_cloud_services.spring_cloud_services["${k1}"].id
+        spring_cloud_service_id = module.spring_cloud_services.spring_cloud_services_id["${k1}"]
       })
     }
   ]...)
@@ -41,7 +41,7 @@ locals {
     for k1, v1 in var.spring_cloud_services : {
       for k2, v2 in coalesce(v1.spring_cloud_application_live_views, {}) :
       "${k1}/${k2}" => merge(v2, {
-        spring_cloud_service_id = module.spring_cloud_services.spring_cloud_services["${k1}"].id
+        spring_cloud_service_id = module.spring_cloud_services.spring_cloud_services_id["${k1}"]
       })
     }
   ]...)
@@ -50,7 +50,7 @@ locals {
     for k1, v1 in var.spring_cloud_services : {
       for k2, v2 in coalesce(v1.spring_cloud_builders, {}) :
       "${k1}/${k2}" => merge(v2, {
-        spring_cloud_service_id = module.spring_cloud_services.spring_cloud_services["${k1}"].id
+        spring_cloud_service_id = module.spring_cloud_services.spring_cloud_services_id["${k1}"]
       })
     }
   ]...)
@@ -59,7 +59,7 @@ locals {
     for k1, v1 in var.spring_cloud_services : {
       for k2, v2 in coalesce(v1.spring_cloud_configuration_services, {}) :
       "${k1}/${k2}" => merge(v2, {
-        spring_cloud_service_id = module.spring_cloud_services.spring_cloud_services["${k1}"].id
+        spring_cloud_service_id = module.spring_cloud_services.spring_cloud_services_id["${k1}"]
       })
     }
   ]...)
@@ -68,7 +68,7 @@ locals {
     for k1, v1 in var.spring_cloud_services : {
       for k2, v2 in coalesce(v1.spring_cloud_dev_tool_portals, {}) :
       "${k1}/${k2}" => merge(v2, {
-        spring_cloud_service_id = module.spring_cloud_services.spring_cloud_services["${k1}"].id
+        spring_cloud_service_id = module.spring_cloud_services.spring_cloud_services_id["${k1}"]
       })
     }
   ]...)
@@ -77,7 +77,7 @@ locals {
     for k1, v1 in var.spring_cloud_services : {
       for k2, v2 in coalesce(v1.spring_cloud_dynatrace_application_performance_monitorings, {}) :
       "${k1}/${k2}" => merge(v2, {
-        spring_cloud_service_id = module.spring_cloud_services.spring_cloud_services["${k1}"].id
+        spring_cloud_service_id = module.spring_cloud_services.spring_cloud_services_id["${k1}"]
       })
     }
   ]...)
@@ -86,7 +86,7 @@ locals {
     for k1, v1 in var.spring_cloud_services : {
       for k2, v2 in coalesce(v1.spring_cloud_elastic_application_performance_monitorings, {}) :
       "${k1}/${k2}" => merge(v2, {
-        spring_cloud_service_id = module.spring_cloud_services.spring_cloud_services["${k1}"].id
+        spring_cloud_service_id = module.spring_cloud_services.spring_cloud_services_id["${k1}"]
       })
     }
   ]...)
@@ -95,7 +95,7 @@ locals {
     for k1, v1 in var.spring_cloud_services : {
       for k2, v2 in coalesce(v1.spring_cloud_gateways, {}) :
       "${k1}/${k2}" => merge(v2, {
-        spring_cloud_service_id = module.spring_cloud_services.spring_cloud_services["${k1}"].id
+        spring_cloud_service_id = module.spring_cloud_services.spring_cloud_services_id["${k1}"]
       })
     }
   ]...)
@@ -104,7 +104,7 @@ locals {
     for k1, v1 in var.spring_cloud_services : {
       for k2, v2 in coalesce(v1.spring_cloud_new_relic_application_performance_monitorings, {}) :
       "${k1}/${k2}" => merge(v2, {
-        spring_cloud_service_id = module.spring_cloud_services.spring_cloud_services["${k1}"].id
+        spring_cloud_service_id = module.spring_cloud_services.spring_cloud_services_id["${k1}"]
       })
     }
   ]...)
@@ -113,7 +113,7 @@ locals {
     for k1, v1 in var.spring_cloud_services : {
       for k2, v2 in coalesce(v1.spring_cloud_storages, {}) :
       "${k1}/${k2}" => merge(v2, {
-        spring_cloud_service_id = module.spring_cloud_services.spring_cloud_services["${k1}"].id
+        spring_cloud_service_id = module.spring_cloud_services.spring_cloud_services_id["${k1}"]
       })
     }
   ]...)
@@ -123,7 +123,7 @@ locals {
       for k2, v2 in coalesce(v1.spring_cloud_api_portals, {}) : {
         for k3, v3 in coalesce(v2.spring_cloud_api_portal_custom_domains, {}) :
         "${k1}/${k2}/${k3}" => merge(v3, {
-          spring_cloud_api_portal_id = module.spring_cloud_api_portals.spring_cloud_api_portals["${k1}/${k2}"].id
+          spring_cloud_api_portal_id = module.spring_cloud_api_portals.spring_cloud_api_portals_id["${k1}/${k2}"]
         })
       }
     ]...)
@@ -134,7 +134,7 @@ locals {
       for k2, v2 in coalesce(v1.spring_cloud_builders, {}) : {
         for k3, v3 in coalesce(v2.spring_cloud_build_pack_bindings, {}) :
         "${k1}/${k2}/${k3}" => merge(v3, {
-          spring_cloud_builder_id = module.spring_cloud_builders.spring_cloud_builders["${k1}/${k2}"].id
+          spring_cloud_builder_id = module.spring_cloud_builders.spring_cloud_builders_id["${k1}/${k2}"]
         })
       }
     ]...)
@@ -145,7 +145,7 @@ locals {
       for k2, v2 in coalesce(v1.spring_cloud_accelerators, {}) : {
         for k3, v3 in coalesce(v2.spring_cloud_customized_accelerators, {}) :
         "${k1}/${k2}/${k3}" => merge(v3, {
-          spring_cloud_accelerator_id = module.spring_cloud_accelerators.spring_cloud_accelerators["${k1}/${k2}"].id
+          spring_cloud_accelerator_id = module.spring_cloud_accelerators.spring_cloud_accelerators_id["${k1}/${k2}"]
         })
       }
     ]...)
@@ -156,7 +156,7 @@ locals {
       for k2, v2 in coalesce(v1.spring_cloud_gateways, {}) : {
         for k3, v3 in coalesce(v2.spring_cloud_gateway_custom_domains, {}) :
         "${k1}/${k2}/${k3}" => merge(v3, {
-          spring_cloud_gateway_id = module.spring_cloud_gateways.spring_cloud_gateways["${k1}/${k2}"].id
+          spring_cloud_gateway_id = module.spring_cloud_gateways.spring_cloud_gateways_id["${k1}/${k2}"]
         })
       }
     ]...)
@@ -167,7 +167,7 @@ locals {
       for k2, v2 in coalesce(v1.spring_cloud_gateways, {}) : {
         for k3, v3 in coalesce(v2.spring_cloud_gateway_route_configs, {}) :
         "${k1}/${k2}/${k3}" => merge(v3, {
-          spring_cloud_gateway_id = module.spring_cloud_gateways.spring_cloud_gateways["${k1}/${k2}"].id
+          spring_cloud_gateway_id = module.spring_cloud_gateways.spring_cloud_gateways_id["${k1}/${k2}"]
         })
       }
     ]...)

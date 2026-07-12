@@ -193,7 +193,7 @@ EOT
         username = string
       }))
       label = optional(string)
-      repository = optional(object({
+      repository = optional(list(object({
         http_basic_auth = optional(object({
           password = string
           username = string
@@ -209,7 +209,7 @@ EOT
           strict_host_key_checking_enabled = optional(bool) # Default: true
         }))
         uri = string
-      }))
+      })))
       search_paths = optional(list(string))
       ssh_auth = optional(object({
         host_key                         = optional(string)
@@ -219,12 +219,12 @@ EOT
       }))
       uri = string
     }))
-    container_registry = optional(object({
+    container_registry = optional(list(object({
       name     = string
       password = string
       server   = string
       username = string
-    }))
+    })))
     default_build_service = optional(object({
       container_registry_name = optional(string)
     }))
@@ -341,7 +341,7 @@ EOT
       name                        = string
       generation                  = optional(string)
       refresh_interval_in_seconds = optional(number)
-      repository = optional(object({
+      repository = optional(list(object({
         ca_certificate_id        = optional(string)
         host_key                 = optional(string)
         host_key_algorithm       = optional(string)
@@ -354,7 +354,7 @@ EOT
         strict_host_key_checking = optional(bool)
         uri                      = string
         username                 = optional(string)
-      }))
+      })))
     })))
     spring_cloud_dev_tool_portals = optional(map(object({
       name                            = string
@@ -446,7 +446,7 @@ EOT
         open_api = optional(object({
           uri = optional(string)
         }))
-        route = optional(object({
+        route = optional(list(object({
           classification_tags    = optional(set(string))
           description            = optional(string)
           filters                = optional(set(string))
@@ -456,7 +456,7 @@ EOT
           title                  = optional(string)
           token_relay            = optional(bool)
           uri                    = optional(string)
-        }))
+        })))
       })))
     })))
     spring_cloud_new_relic_application_performance_monitorings = optional(map(object({

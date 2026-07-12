@@ -51,7 +51,11 @@ Nested spring_cloud_api_portals (azurerm_spring_cloud_api_portal):
 Nested spring_cloud_app_dynamics_application_performance_monitorings (azurerm_spring_cloud_app_dynamics_application_performance_monitoring):
     Required:
         - agent_account_access_key
+        - agent_account_access_key_key_vault_id (alternative to agent_account_access_key - read from Key Vault instead)
+        - agent_account_access_key_key_vault_secret_name (alternative to agent_account_access_key - read from Key Vault instead)
         - agent_account_name
+        - agent_account_name_key_vault_id (alternative to agent_account_name - read from Key Vault instead)
+        - agent_account_name_key_vault_secret_name (alternative to agent_account_name - read from Key Vault instead)
         - controller_host_name
         - name
     Optional:
@@ -106,9 +110,15 @@ Nested spring_cloud_dynatrace_application_performance_monitorings (azurerm_sprin
         - connection_point
         - name
         - tenant
+        - tenant_key_vault_id (alternative to tenant - read from Key Vault instead)
+        - tenant_key_vault_secret_name (alternative to tenant - read from Key Vault instead)
         - tenant_token
+        - tenant_token_key_vault_id (alternative to tenant_token - read from Key Vault instead)
+        - tenant_token_key_vault_secret_name (alternative to tenant_token - read from Key Vault instead)
     Optional:
         - api_token
+        - api_token_key_vault_id (alternative to api_token - read from Key Vault instead)
+        - api_token_key_vault_secret_name (alternative to api_token - read from Key Vault instead)
         - api_url
         - environment_id
         - globally_enabled
@@ -131,6 +141,8 @@ Nested spring_cloud_gateways (azurerm_spring_cloud_gateway):
         - instance_count
         - public_network_access_enabled
         - sensitive_environment_variables
+        - sensitive_environment_variables_key_vault_id (alternative to sensitive_environment_variables - read from Key Vault instead)
+        - sensitive_environment_variables_key_vault_secret_name (alternative to sensitive_environment_variables - read from Key Vault instead)
         - api_metadata (block)
         - client_authorization (block)
         - cors (block)
@@ -158,6 +170,8 @@ Nested spring_cloud_new_relic_application_performance_monitorings (azurerm_sprin
     Required:
         - app_name
         - license_key
+        - license_key_key_vault_id (alternative to license_key - read from Key Vault instead)
+        - license_key_key_vault_secret_name (alternative to license_key - read from Key Vault instead)
         - name
     Optional:
         - agent_enabled
@@ -294,17 +308,21 @@ EOT
       })))
     })))
     spring_cloud_app_dynamics_application_performance_monitorings = optional(map(object({
-      agent_account_access_key = string
-      agent_account_name       = string
-      controller_host_name     = string
-      name                     = string
-      agent_application_name   = optional(string)
-      agent_node_name          = optional(string)
-      agent_tier_name          = optional(string)
-      agent_unique_host_id     = optional(string)
-      controller_port          = optional(number)
-      controller_ssl_enabled   = optional(bool)
-      globally_enabled         = optional(bool)
+      agent_account_access_key                       = string
+      agent_account_access_key_key_vault_id          = optional(string)
+      agent_account_access_key_key_vault_secret_name = optional(string)
+      agent_account_name                             = string
+      agent_account_name_key_vault_id                = optional(string)
+      agent_account_name_key_vault_secret_name       = optional(string)
+      controller_host_name                           = string
+      name                                           = string
+      agent_application_name                         = optional(string)
+      agent_node_name                                = optional(string)
+      agent_tier_name                                = optional(string)
+      agent_unique_host_id                           = optional(string)
+      controller_port                                = optional(number)
+      controller_ssl_enabled                         = optional(bool)
+      globally_enabled                               = optional(bool)
     })))
     spring_cloud_application_insights_application_performance_monitorings = optional(map(object({
       name                         = string
@@ -369,14 +387,20 @@ EOT
       }))
     })))
     spring_cloud_dynatrace_application_performance_monitorings = optional(map(object({
-      connection_point = string
-      name             = string
-      tenant           = string
-      tenant_token     = string
-      api_token        = optional(string)
-      api_url          = optional(string)
-      environment_id   = optional(string)
-      globally_enabled = optional(bool) # Default: false
+      connection_point                   = string
+      name                               = string
+      tenant                             = string
+      tenant_key_vault_id                = optional(string)
+      tenant_key_vault_secret_name       = optional(string)
+      tenant_token                       = string
+      tenant_token_key_vault_id          = optional(string)
+      tenant_token_key_vault_secret_name = optional(string)
+      api_token                          = optional(string)
+      api_token_key_vault_id             = optional(string)
+      api_token_key_vault_secret_name    = optional(string)
+      api_url                            = optional(string)
+      environment_id                     = optional(string)
+      globally_enabled                   = optional(bool) # Default: false
     })))
     spring_cloud_elastic_application_performance_monitorings = optional(map(object({
       application_packages = list(string)
@@ -386,14 +410,16 @@ EOT
       globally_enabled     = optional(bool) # Default: false
     })))
     spring_cloud_gateways = optional(map(object({
-      name                                     = string
-      application_performance_monitoring_ids   = optional(list(string))
-      application_performance_monitoring_types = optional(list(string))
-      environment_variables                    = optional(map(string))
-      https_only                               = optional(bool)
-      instance_count                           = optional(number) # Default: 1
-      public_network_access_enabled            = optional(bool)
-      sensitive_environment_variables          = optional(map(string))
+      name                                                  = string
+      application_performance_monitoring_ids                = optional(list(string))
+      application_performance_monitoring_types              = optional(list(string))
+      environment_variables                                 = optional(map(string))
+      https_only                                            = optional(bool)
+      instance_count                                        = optional(number) # Default: 1
+      public_network_access_enabled                         = optional(bool)
+      sensitive_environment_variables                       = optional(map(string))
+      sensitive_environment_variables_key_vault_id          = optional(string)
+      sensitive_environment_variables_key_vault_secret_name = optional(string)
       api_metadata = optional(object({
         description       = optional(string)
         documentation_url = optional(string)
@@ -460,17 +486,19 @@ EOT
       })))
     })))
     spring_cloud_new_relic_application_performance_monitorings = optional(map(object({
-      app_name                        = string
-      license_key                     = string
-      name                            = string
-      agent_enabled                   = optional(bool) # Default: true
-      app_server_port                 = optional(number)
-      audit_mode_enabled              = optional(bool)
-      auto_app_naming_enabled         = optional(bool)
-      auto_transaction_naming_enabled = optional(bool) # Default: true
-      custom_tracing_enabled          = optional(bool) # Default: true
-      globally_enabled                = optional(bool)
-      labels                          = optional(map(string))
+      app_name                          = string
+      license_key                       = string
+      license_key_key_vault_id          = optional(string)
+      license_key_key_vault_secret_name = optional(string)
+      name                              = string
+      agent_enabled                     = optional(bool) # Default: true
+      app_server_port                   = optional(number)
+      audit_mode_enabled                = optional(bool)
+      auto_app_naming_enabled           = optional(bool)
+      auto_transaction_naming_enabled   = optional(bool) # Default: true
+      custom_tracing_enabled            = optional(bool) # Default: true
+      globally_enabled                  = optional(bool)
+      labels                            = optional(map(string))
     })))
     spring_cloud_storages = optional(map(object({
       name                 = string

@@ -1,4 +1,9 @@
 # --- azurerm_spring_cloud_service ---
+output "spring_cloud_services_id" {
+  description = "Map of id values across all spring_cloud_services, keyed the same as var.spring_cloud_services"
+  value       = module.spring_cloud_services.spring_cloud_services_id
+}
+
 output "spring_cloud_services_build_agent_pool_size" {
   description = "Map of build_agent_pool_size values across all spring_cloud_services, keyed the same as var.spring_cloud_services"
   value       = module.spring_cloud_services.spring_cloud_services_build_agent_pool_size
@@ -102,6 +107,11 @@ output "spring_cloud_services_zone_redundant" {
 }
 
 # --- azurerm_spring_cloud_accelerator ---
+output "spring_cloud_accelerators_id" {
+  description = "Map of id values across all spring_cloud_accelerators, keyed the same as var.spring_cloud_accelerators"
+  value       = module.spring_cloud_accelerators.spring_cloud_accelerators_id
+}
+
 output "spring_cloud_accelerators_name" {
   description = "Map of name values across all spring_cloud_accelerators, keyed the same as var.spring_cloud_accelerators"
   value       = module.spring_cloud_accelerators.spring_cloud_accelerators_name
@@ -113,6 +123,11 @@ output "spring_cloud_accelerators_spring_cloud_service_id" {
 }
 
 # --- azurerm_spring_cloud_api_portal ---
+output "spring_cloud_api_portals_id" {
+  description = "Map of id values across all spring_cloud_api_portals, keyed the same as var.spring_cloud_api_portals"
+  value       = module.spring_cloud_api_portals.spring_cloud_api_portals_id
+}
+
 output "spring_cloud_api_portals_api_try_out_enabled" {
   description = "Map of api_try_out_enabled values across all spring_cloud_api_portals, keyed the same as var.spring_cloud_api_portals"
   value       = module.spring_cloud_api_portals.spring_cloud_api_portals_api_try_out_enabled
@@ -159,6 +174,11 @@ output "spring_cloud_api_portals_url" {
 }
 
 # --- azurerm_spring_cloud_app_dynamics_application_performance_monitoring ---
+output "spring_cloud_app_dynamics_application_performance_monitorings_id" {
+  description = "Map of id values across all spring_cloud_app_dynamics_application_performance_monitorings, keyed the same as var.spring_cloud_app_dynamics_application_performance_monitorings"
+  value       = module.spring_cloud_app_dynamics_application_performance_monitorings.spring_cloud_app_dynamics_application_performance_monitorings_id
+}
+
 output "spring_cloud_app_dynamics_application_performance_monitorings_agent_account_access_key" {
   description = "Map of agent_account_access_key values across all spring_cloud_app_dynamics_application_performance_monitorings, keyed the same as var.spring_cloud_app_dynamics_application_performance_monitorings"
   value       = module.spring_cloud_app_dynamics_application_performance_monitorings.spring_cloud_app_dynamics_application_performance_monitorings_agent_account_access_key
@@ -222,6 +242,11 @@ output "spring_cloud_app_dynamics_application_performance_monitorings_spring_clo
 }
 
 # --- azurerm_spring_cloud_application_insights_application_performance_monitoring ---
+output "spring_cloud_application_insights_application_performance_monitorings_id" {
+  description = "Map of id values across all spring_cloud_application_insights_application_performance_monitorings, keyed the same as var.spring_cloud_application_insights_application_performance_monitorings"
+  value       = module.spring_cloud_application_insights_application_performance_monitorings.spring_cloud_application_insights_application_performance_monitorings_id
+}
+
 output "spring_cloud_application_insights_application_performance_monitorings_connection_string" {
   description = "Map of connection_string values across all spring_cloud_application_insights_application_performance_monitorings, keyed the same as var.spring_cloud_application_insights_application_performance_monitorings"
   value       = module.spring_cloud_application_insights_application_performance_monitorings.spring_cloud_application_insights_application_performance_monitorings_connection_string
@@ -263,6 +288,11 @@ output "spring_cloud_application_insights_application_performance_monitorings_sp
 }
 
 # --- azurerm_spring_cloud_application_live_view ---
+output "spring_cloud_application_live_views_id" {
+  description = "Map of id values across all spring_cloud_application_live_views, keyed the same as var.spring_cloud_application_live_views"
+  value       = module.spring_cloud_application_live_views.spring_cloud_application_live_views_id
+}
+
 output "spring_cloud_application_live_views_name" {
   description = "Map of name values across all spring_cloud_application_live_views, keyed the same as var.spring_cloud_application_live_views"
   value       = module.spring_cloud_application_live_views.spring_cloud_application_live_views_name
@@ -274,6 +304,11 @@ output "spring_cloud_application_live_views_spring_cloud_service_id" {
 }
 
 # --- azurerm_spring_cloud_builder ---
+output "spring_cloud_builders_id" {
+  description = "Map of id values across all spring_cloud_builders, keyed the same as var.spring_cloud_builders"
+  value       = module.spring_cloud_builders.spring_cloud_builders_id
+}
+
 output "spring_cloud_builders_build_pack_group" {
   description = "Map of build_pack_group values across all spring_cloud_builders, keyed the same as var.spring_cloud_builders"
   value       = module.spring_cloud_builders.spring_cloud_builders_build_pack_group
@@ -295,6 +330,11 @@ output "spring_cloud_builders_stack" {
 }
 
 # --- azurerm_spring_cloud_configuration_service ---
+output "spring_cloud_configuration_services_id" {
+  description = "Map of id values across all spring_cloud_configuration_services, keyed the same as var.spring_cloud_configuration_services"
+  value       = module.spring_cloud_configuration_services.spring_cloud_configuration_services_id
+}
+
 output "spring_cloud_configuration_services_generation" {
   description = "Map of generation values across all spring_cloud_configuration_services, keyed the same as var.spring_cloud_configuration_services"
   value       = module.spring_cloud_configuration_services.spring_cloud_configuration_services_generation
@@ -322,6 +362,11 @@ output "spring_cloud_configuration_services_spring_cloud_service_id" {
 }
 
 # --- azurerm_spring_cloud_dev_tool_portal ---
+output "spring_cloud_dev_tool_portals_id" {
+  description = "Map of id values across all spring_cloud_dev_tool_portals, keyed the same as var.spring_cloud_dev_tool_portals"
+  value       = module.spring_cloud_dev_tool_portals.spring_cloud_dev_tool_portals_id
+}
+
 output "spring_cloud_dev_tool_portals_application_accelerator_enabled" {
   description = "Map of application_accelerator_enabled values across all spring_cloud_dev_tool_portals, keyed the same as var.spring_cloud_dev_tool_portals"
   value       = module.spring_cloud_dev_tool_portals.spring_cloud_dev_tool_portals_application_accelerator_enabled
@@ -353,6 +398,11 @@ output "spring_cloud_dev_tool_portals_sso" {
 }
 
 # --- azurerm_spring_cloud_dynatrace_application_performance_monitoring ---
+output "spring_cloud_dynatrace_application_performance_monitorings_id" {
+  description = "Map of id values across all spring_cloud_dynatrace_application_performance_monitorings, keyed the same as var.spring_cloud_dynatrace_application_performance_monitorings"
+  value       = module.spring_cloud_dynatrace_application_performance_monitorings.spring_cloud_dynatrace_application_performance_monitorings_id
+}
+
 output "spring_cloud_dynatrace_application_performance_monitorings_api_token" {
   description = "Map of api_token values across all spring_cloud_dynatrace_application_performance_monitorings, keyed the same as var.spring_cloud_dynatrace_application_performance_monitorings"
   value       = module.spring_cloud_dynatrace_application_performance_monitorings.spring_cloud_dynatrace_application_performance_monitorings_api_token
@@ -402,6 +452,11 @@ output "spring_cloud_dynatrace_application_performance_monitorings_tenant_token"
 }
 
 # --- azurerm_spring_cloud_elastic_application_performance_monitoring ---
+output "spring_cloud_elastic_application_performance_monitorings_id" {
+  description = "Map of id values across all spring_cloud_elastic_application_performance_monitorings, keyed the same as var.spring_cloud_elastic_application_performance_monitorings"
+  value       = module.spring_cloud_elastic_application_performance_monitorings.spring_cloud_elastic_application_performance_monitorings_id
+}
+
 output "spring_cloud_elastic_application_performance_monitorings_application_packages" {
   description = "Map of application_packages values across all spring_cloud_elastic_application_performance_monitorings, keyed the same as var.spring_cloud_elastic_application_performance_monitorings"
   value       = module.spring_cloud_elastic_application_performance_monitorings.spring_cloud_elastic_application_performance_monitorings_application_packages
@@ -433,6 +488,11 @@ output "spring_cloud_elastic_application_performance_monitorings_spring_cloud_se
 }
 
 # --- azurerm_spring_cloud_gateway ---
+output "spring_cloud_gateways_id" {
+  description = "Map of id values across all spring_cloud_gateways, keyed the same as var.spring_cloud_gateways"
+  value       = module.spring_cloud_gateways.spring_cloud_gateways_id
+}
+
 output "spring_cloud_gateways_api_metadata" {
   description = "Map of api_metadata values across all spring_cloud_gateways, keyed the same as var.spring_cloud_gateways"
   value       = module.spring_cloud_gateways.spring_cloud_gateways_api_metadata
@@ -520,6 +580,11 @@ output "spring_cloud_gateways_url" {
 }
 
 # --- azurerm_spring_cloud_new_relic_application_performance_monitoring ---
+output "spring_cloud_new_relic_application_performance_monitorings_id" {
+  description = "Map of id values across all spring_cloud_new_relic_application_performance_monitorings, keyed the same as var.spring_cloud_new_relic_application_performance_monitorings"
+  value       = module.spring_cloud_new_relic_application_performance_monitorings.spring_cloud_new_relic_application_performance_monitorings_id
+}
+
 output "spring_cloud_new_relic_application_performance_monitorings_agent_enabled" {
   description = "Map of agent_enabled values across all spring_cloud_new_relic_application_performance_monitorings, keyed the same as var.spring_cloud_new_relic_application_performance_monitorings"
   value       = module.spring_cloud_new_relic_application_performance_monitorings.spring_cloud_new_relic_application_performance_monitorings_agent_enabled
@@ -582,6 +647,11 @@ output "spring_cloud_new_relic_application_performance_monitorings_spring_cloud_
 }
 
 # --- azurerm_spring_cloud_storage ---
+output "spring_cloud_storages_id" {
+  description = "Map of id values across all spring_cloud_storages, keyed the same as var.spring_cloud_storages"
+  value       = module.spring_cloud_storages.spring_cloud_storages_id
+}
+
 output "spring_cloud_storages_name" {
   description = "Map of name values across all spring_cloud_storages, keyed the same as var.spring_cloud_storages"
   value       = module.spring_cloud_storages.spring_cloud_storages_name
@@ -603,6 +673,11 @@ output "spring_cloud_storages_storage_account_name" {
 }
 
 # --- azurerm_spring_cloud_api_portal_custom_domain ---
+output "spring_cloud_api_portal_custom_domains_id" {
+  description = "Map of id values across all spring_cloud_api_portal_custom_domains, keyed the same as var.spring_cloud_api_portal_custom_domains"
+  value       = module.spring_cloud_api_portal_custom_domains.spring_cloud_api_portal_custom_domains_id
+}
+
 output "spring_cloud_api_portal_custom_domains_name" {
   description = "Map of name values across all spring_cloud_api_portal_custom_domains, keyed the same as var.spring_cloud_api_portal_custom_domains"
   value       = module.spring_cloud_api_portal_custom_domains.spring_cloud_api_portal_custom_domains_name
@@ -619,6 +694,11 @@ output "spring_cloud_api_portal_custom_domains_thumbprint" {
 }
 
 # --- azurerm_spring_cloud_build_pack_binding ---
+output "spring_cloud_build_pack_bindings_id" {
+  description = "Map of id values across all spring_cloud_build_pack_bindings, keyed the same as var.spring_cloud_build_pack_bindings"
+  value       = module.spring_cloud_build_pack_bindings.spring_cloud_build_pack_bindings_id
+}
+
 output "spring_cloud_build_pack_bindings_binding_type" {
   description = "Map of binding_type values across all spring_cloud_build_pack_bindings, keyed the same as var.spring_cloud_build_pack_bindings"
   value       = module.spring_cloud_build_pack_bindings.spring_cloud_build_pack_bindings_binding_type
@@ -640,6 +720,11 @@ output "spring_cloud_build_pack_bindings_spring_cloud_builder_id" {
 }
 
 # --- azurerm_spring_cloud_customized_accelerator ---
+output "spring_cloud_customized_accelerators_id" {
+  description = "Map of id values across all spring_cloud_customized_accelerators, keyed the same as var.spring_cloud_customized_accelerators"
+  value       = module.spring_cloud_customized_accelerators.spring_cloud_customized_accelerators_id
+}
+
 output "spring_cloud_customized_accelerators_accelerator_tags" {
   description = "Map of accelerator_tags values across all spring_cloud_customized_accelerators, keyed the same as var.spring_cloud_customized_accelerators"
   value       = module.spring_cloud_customized_accelerators.spring_cloud_customized_accelerators_accelerator_tags
@@ -682,6 +767,11 @@ output "spring_cloud_customized_accelerators_spring_cloud_accelerator_id" {
 }
 
 # --- azurerm_spring_cloud_gateway_custom_domain ---
+output "spring_cloud_gateway_custom_domains_id" {
+  description = "Map of id values across all spring_cloud_gateway_custom_domains, keyed the same as var.spring_cloud_gateway_custom_domains"
+  value       = module.spring_cloud_gateway_custom_domains.spring_cloud_gateway_custom_domains_id
+}
+
 output "spring_cloud_gateway_custom_domains_name" {
   description = "Map of name values across all spring_cloud_gateway_custom_domains, keyed the same as var.spring_cloud_gateway_custom_domains"
   value       = module.spring_cloud_gateway_custom_domains.spring_cloud_gateway_custom_domains_name
@@ -698,6 +788,11 @@ output "spring_cloud_gateway_custom_domains_thumbprint" {
 }
 
 # --- azurerm_spring_cloud_gateway_route_config ---
+output "spring_cloud_gateway_route_configs_id" {
+  description = "Map of id values across all spring_cloud_gateway_route_configs, keyed the same as var.spring_cloud_gateway_route_configs"
+  value       = module.spring_cloud_gateway_route_configs.spring_cloud_gateway_route_configs_id
+}
+
 output "spring_cloud_gateway_route_configs_filters" {
   description = "Map of filters values across all spring_cloud_gateway_route_configs, keyed the same as var.spring_cloud_gateway_route_configs"
   value       = module.spring_cloud_gateway_route_configs.spring_cloud_gateway_route_configs_filters

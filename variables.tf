@@ -197,10 +197,10 @@ EOT
     log_stream_public_endpoint_enabled = optional(bool)
     managed_environment_id             = optional(string)
     service_registry_enabled           = optional(bool)
-    sku_name                           = optional(string) # Default: "S0"
+    sku_name                           = optional(string)
     sku_tier                           = optional(string)
     tags                               = optional(map(string))
-    zone_redundant                     = optional(bool) # Default: false
+    zone_redundant                     = optional(bool)
     config_server_git_setting = optional(object({
       http_basic_auth = optional(object({
         password = string
@@ -220,7 +220,7 @@ EOT
           host_key                         = optional(string)
           host_key_algorithm               = optional(string)
           private_key                      = string
-          strict_host_key_checking_enabled = optional(bool) # Default: true
+          strict_host_key_checking_enabled = optional(bool)
         }))
         uri = string
       })))
@@ -229,7 +229,7 @@ EOT
         host_key                         = optional(string)
         host_key_algorithm               = optional(string)
         private_key                      = string
-        strict_host_key_checking_enabled = optional(bool) # Default: true
+        strict_host_key_checking_enabled = optional(bool)
       }))
       uri = string
     }))
@@ -251,21 +251,21 @@ EOT
       app_network_resource_group             = optional(string)
       app_subnet_id                          = string
       cidr_ranges                            = list(string)
-      outbound_type                          = optional(string) # Default: "loadBalancer"
+      outbound_type                          = optional(string)
       read_timeout_seconds                   = optional(number)
       service_runtime_network_resource_group = optional(string)
       service_runtime_subnet_id              = string
     }))
     trace = optional(object({
       connection_string = optional(string)
-      sample_rate       = optional(number) # Default: 10
+      sample_rate       = optional(number)
     }))
     spring_cloud_accelerators = optional(map(object({
       name = string
       spring_cloud_customized_accelerators = optional(map(object({
         name             = string
         accelerator_tags = optional(list(string))
-        accelerator_type = optional(string) # Default: "Accelerator"
+        accelerator_type = optional(string)
         description      = optional(string)
         display_name     = optional(string)
         icon_url         = optional(string)
@@ -294,7 +294,7 @@ EOT
       api_try_out_enabled           = optional(bool)
       gateway_ids                   = optional(set(string))
       https_only_enabled            = optional(bool)
-      instance_count                = optional(number) # Default: 1
+      instance_count                = optional(number)
       public_network_access_enabled = optional(bool)
       sso = optional(object({
         client_id     = optional(string)
@@ -327,7 +327,7 @@ EOT
     spring_cloud_application_insights_application_performance_monitorings = optional(map(object({
       name                         = string
       connection_string            = optional(string)
-      globally_enabled             = optional(bool) # Default: false
+      globally_enabled             = optional(bool)
       role_instance                = optional(string)
       role_name                    = optional(string)
       sampling_percentage          = optional(number)
@@ -400,14 +400,14 @@ EOT
       api_token_key_vault_secret_name    = optional(string)
       api_url                            = optional(string)
       environment_id                     = optional(string)
-      globally_enabled                   = optional(bool) # Default: false
+      globally_enabled                   = optional(bool)
     })))
     spring_cloud_elastic_application_performance_monitorings = optional(map(object({
       application_packages = list(string)
       name                 = string
       server_url           = string
       service_name         = string
-      globally_enabled     = optional(bool) # Default: false
+      globally_enabled     = optional(bool)
     })))
     spring_cloud_gateways = optional(map(object({
       name                                                  = string
@@ -415,7 +415,7 @@ EOT
       application_performance_monitoring_types              = optional(list(string))
       environment_variables                                 = optional(map(string))
       https_only                                            = optional(bool)
-      instance_count                                        = optional(number) # Default: 1
+      instance_count                                        = optional(number)
       public_network_access_enabled                         = optional(bool)
       sensitive_environment_variables                       = optional(map(string))
       sensitive_environment_variables_key_vault_id          = optional(string)
@@ -449,8 +449,8 @@ EOT
         time_to_live = optional(string)
       }))
       quota = optional(object({
-        cpu    = optional(string) # Default: "1"
-        memory = optional(string) # Default: "2Gi"
+        cpu    = optional(string)
+        memory = optional(string)
       }))
       sso = optional(object({
         client_id     = optional(string)
@@ -491,12 +491,12 @@ EOT
       license_key_key_vault_id          = optional(string)
       license_key_key_vault_secret_name = optional(string)
       name                              = string
-      agent_enabled                     = optional(bool) # Default: true
+      agent_enabled                     = optional(bool)
       app_server_port                   = optional(number)
       audit_mode_enabled                = optional(bool)
       auto_app_naming_enabled           = optional(bool)
-      auto_transaction_naming_enabled   = optional(bool) # Default: true
-      custom_tracing_enabled            = optional(bool) # Default: true
+      auto_transaction_naming_enabled   = optional(bool)
+      custom_tracing_enabled            = optional(bool)
       globally_enabled                  = optional(bool)
       labels                            = optional(map(string))
     })))
